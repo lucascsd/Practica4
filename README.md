@@ -16,7 +16,7 @@ Implementar mediante el modelo de Máquina de Estados Finitos el antirrebote de 
  - Usar delay no bloqueantes;
 
 #### Modularización
-![](https://github.com/lucascsd/practicoDos/blob/main/image/Capas%20Ejercicio%202.svg)
+![](https://github.com/lucascsd/Practica4/blob/main/image/Capas%20Ejercicio%202.svg)
 
 ###### Archivos de modularización
 | File name | hearders                    |
@@ -27,5 +27,5 @@ Implementar mediante el modelo de Máquina de Estados Finitos el antirrebote de 
 | [teclas.c](https://github.com/martinjrios/Practica2/blob/main/src/teclas.c)|[teclas.h](https://github.com/martinjrios/Practica2/blob/main/inc/teclas.h)|
 
 ### Notas de compilación
-Seleccionar el punto del ejercicio a compilar comentando o descomentando la macro correspondiente en el archivo [ejercicio4.h](https://github.com/martinjrios/Practica2/blob/main/inc/ejercicio.h) 
+Seleccionar el punto del ejercicio a compilar comentando o descomentando la macro correspondiente en el archivo [ejercicio4.h](https://github.com/lucascsd/Practica4/blob/main/inc/ejercicio4.h) 
 

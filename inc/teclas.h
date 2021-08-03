@@ -1,11 +1,11 @@
 /*=============================================================================
  * Authors: Martin Rios <jrios@fi.uba.ar> - Lucas Zalazar <lucas.zalazar6@gmail.com>
- * Date: 2021/07/12
+ * Date: 2021/08/03
  * Version: 1.0
  *===========================================================================*/
 
-#ifndef EJERCICIOPROPUESTO_PRACTICA3_INC_TECLAS_H_
-#define EJERCICIOPROPUESTO_PRACTICA3_INC_TECLAS_H_
+#ifndef EJERCICIOPROPUESTO_PRACTICA4_INC_TECLAS_H_
+#define EJERCICIOPROPUESTO_PRACTICA4_INC_TECLAS_H_
 
 #include "sapi.h"
 
@@ -24,9 +24,9 @@
 typedef enum
 {
 	TECLA_PRESIONADA,
-	TECLA_ASCENDENTE,
-	TECLA_LIBERADA,
-	TECLA_DESCENDENTE,
+	TECLA_FLANCO_ASCENDENTE,
+	TECLA_NO_PRESIONADA,
+	TECLA_FLANCO_DESCENDENTE,
 }stateKey_t;
 
 typedef struct
@@ -38,7 +38,8 @@ typedef struct
 
 teclaFSM teclaUNO, teclaDOS, teclaTRES, teclaCUATRO;
 
-// FUNCIONES DE ACCION SEGUN TECLA PRESIONADA O NO
+// FUNCIONES DE ACCION PARA FLANCO ASCENDENTE
+// Y DESCENDENTE
 bool_t buttonPressed(gpioMap_t tecla);
 bool_t buttonReleased(gpioMap_t tecla);
 
@@ -47,4 +48,4 @@ bool_t buttonReleased(gpioMap_t tecla);
 teclaFSM inicializarKeyFSM ( gpioMap_t key );
 bool_t actualizarKeyFSM ( teclaFSM * teclaX );
 
-#endif /* EJERCICIOPROPUESTO_PRACTICA3_INC_TECLAS_H_ */
+#endif /* EJERCICIOPROPUESTO_PRACTICA4_INC_TECLAS_H_ */

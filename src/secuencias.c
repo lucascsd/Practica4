@@ -1,5 +1,5 @@
 /*=============================================================================
- * Ejercicio 3
+ * Ejercicio 4
  * file: secuencias.c
  * Authors: Martin Rios <jrios@fi.uba.ar> - Lucas Zalazar <lucas.zalazar6@gmail.com>
  * Date: 2021/07/12
@@ -36,16 +36,7 @@ bool_t ledSequenceOn(controlSequence_t *controlSequence)
 
 	if( ledIndex >= controlSequence->lastLed ) return FALSE;  // Se comprueba que el indice del LED este dentro de los valores posibles de la secuencia
 
-//	/* Se cambia el modo de la secuencia */
-//	if(keyPressed(KEY2)){
-//		modeSeqIndex += 1;
-//		if(modeSeqIndex > ((sizeof(modeSequence)/sizeof(modeSt_t)) - 1)) modeSeqIndex = 0;
-//
-//		mode = modeSequence[modeSeqIndex];
-//		if(mode == NORMAL) controlSequence->ledIndex = 0;
-//	}
-
-	/* Se actualiza la MEF de la tecla pasada por argunmento */
+	/* Se cambia el modo de la secuencia */
 	if ( actualizarKeyFSM ( &teclaDOS ) ){
 		modeSeqIndex += 1;
 		if(modeSeqIndex > ((sizeof(modeSequence)/sizeof(modeSt_t)) - 1)) modeSeqIndex = 0;

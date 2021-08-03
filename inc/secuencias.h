@@ -1,11 +1,11 @@
 /*=============================================================================
  * Authors: Martin Rios <jrios@fi.uba.ar> - Lucas Zalazar <lucas.zalazar6@gmail.com>
- * Date: 2021/07/12
+ * Date: 2021/08/03
  * Version: 1.0
  *===========================================================================*/
 
-#ifndef EJERCICIOPROPUESTO_PRACTICA3_INC_SECUENCIAS_H_
-#define EJERCICIOPROPUESTO_PRACTICA3_INC_SECUENCIAS_H_
+#ifndef EJERCICIOPROPUESTO_PRACTICA4_INC_SECUENCIAS_H_
+#define EJERCICIOPROPUESTO_PRACTICA4_INC_SECUENCIAS_H_
 
 #include "led.h"
 #include "teclas.h"
@@ -40,4 +40,4 @@ typedef enum
 // FUNCION DE CONTROL DE SECUENCIA DE LEDS
 bool_t ledSequenceOn ( controlSequence_t *controlSequence );
 
-#endif /* EJERCICIOPROPUESTO_PRACTICA3_INC_SECUENCIAS_H_ */
+#endif /* EJERCICIOPROPUESTO_PRACTICA4_INC_SECUENCIAS_H_ */

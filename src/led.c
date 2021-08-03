@@ -1,5 +1,5 @@
 /*=============================================================================
- * Ejercicio 3
+ * Ejercicio 4
  * file: led.c
  * Authors: Martin Rios <jrios@fi.uba.ar> - Lucas Zalazar <lucas.zalazar6@gmail.com>
  * Date: 2021/07/12

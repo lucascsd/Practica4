@@ -1,11 +1,11 @@
 /*=============================================================================
  * Authors: Martin Rios <jrios@fi.uba.ar> - Lucas Zalazar <lucas.zalazar6@gmail.com>
- * Date: 2021/07/12
+ * Date: 2021/08/03
  * Version: 1.0
  *===========================================================================*/
 
-#ifndef EJERCICIOPROPUESTO_PRACTICA3_INC_LED_H_
-#define EJERCICIOPROPUESTO_PRACTICA3_INC_LED_H_
+#ifndef EJERCICIOPROPUESTO_PRACTICA4_INC_LED_H_
+#define EJERCICIOPROPUESTO_PRACTICA4_INC_LED_H_
 
 #include "sapi.h"
 
@@ -21,4 +21,4 @@ bool_t ledOn ( gpioMap_t led );
 bool_t ledToggle( gpioMap_t led );
 void blinkError ( tick_t delayError );
 
-#endif /* EJERCICIOPROPUESTO_PRACTICA3_INC_LED_H_ */
+#endif /* EJERCICIOPROPUESTO_PRACTICA4_INC_LED_H_ */
