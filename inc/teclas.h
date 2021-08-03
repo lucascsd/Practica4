@@ -10,15 +10,7 @@
 #include "sapi.h"
 
 // TIEMPOS DE REBOTE (ms)
-#define DEBOUNCE_TIME	40
-
-// TECLAS
-#define KEY1			0
-#define KEY2			1
-#define KEY3			2
-#define KEY4			3
-
-#define LAST_KEY		4
+#define DEBOUNCE_TIME	100
 
 // DEFINICION DE TIPOS DATOS ENUM
 typedef enum
@@ -37,11 +29,6 @@ typedef struct
 }teclaFSM ;
 
 teclaFSM teclaUNO, teclaDOS, teclaTRES, teclaCUATRO;
-
-// FUNCIONES DE ACCION PARA FLANCO ASCENDENTE
-// Y DESCENDENTE
-bool_t buttonPressed(gpioMap_t tecla);
-bool_t buttonReleased(gpioMap_t tecla);
 
 //FUNCIONES PARA LA MAQUINA DE ESTADO FINITO
 //DE LAS TECLAS
