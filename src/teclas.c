@@ -31,6 +31,7 @@ bool_t actualizarKeyFSM ( teclaFSM * tecla ){
 	case TECLA_PRESIONADA:
 		if ( gpioRead ( tecla->teclaPosicion ) ) {
 			tecla->estadoTecla = TECLA_FLANCO_ASCENDENTE;
+			printStateDebounce( tecla->estadoTecla );
 			delayInit( &tecla->retardoNoBloqueante, DEBOUNCE_TIME );
 		}
 		break;
@@ -39,6 +40,7 @@ bool_t actualizarKeyFSM ( teclaFSM * tecla ){
 		if ( delayRead ( &tecla->retardoNoBloqueante ) ) {
 			if ( gpioRead ( tecla->teclaPosicion ) ){
 				tecla->estadoTecla = TECLA_NO_PRESIONADA;
+				printStateDebounce( tecla->estadoTecla );
 				changedState = TRUE;
 			}
 			else tecla->estadoTecla = TECLA_PRESIONADA;
@@ -48,6 +50,7 @@ bool_t actualizarKeyFSM ( teclaFSM * tecla ){
 	case TECLA_NO_PRESIONADA:
 		if ( !gpioRead ( tecla->teclaPosicion ) ){
 			tecla->estadoTecla = TECLA_FLANCO_DESCENDENTE;
+			printStateDebounce( tecla->estadoTecla );
 			delayInit( &tecla->retardoNoBloqueante, DEBOUNCE_TIME );
 		}
 		break;
@@ -56,6 +59,7 @@ bool_t actualizarKeyFSM ( teclaFSM * tecla ){
 		if ( delayRead ( &tecla->retardoNoBloqueante ) ) {
 			if ( !gpioRead ( tecla->teclaPosicion ) ){
 				tecla->estadoTecla = TECLA_PRESIONADA;
+				printStateDebounce( tecla->estadoTecla );
 				changedState = TRUE;
 			}
 			else tecla->estadoTecla = TECLA_NO_PRESIONADA;

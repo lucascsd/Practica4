@@ -9,6 +9,7 @@
 
 #include "sapi.h"
 #include "semaforo.h"
+#include "uart.h"
 
 #define TICK_RATE		1 // Default 1ms
 

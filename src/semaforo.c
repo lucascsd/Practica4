@@ -16,6 +16,7 @@ static delay_t ledDelay; /* Variable del tipo tick para retardos */
 void inicializarSemaforo(modeSt_t _mode)
 {
 	mode = _mode;
+	printModeSeq( mode );
 
 	switch(mode){
 	case NORMAL:
@@ -41,7 +42,8 @@ bool_t actualizarSemaforo(teclaFSM* tecla)
 		if(tecla->estadoTecla == TECLA_NO_PRESIONADA){
 			mode += 1;
 			if(mode > ALARMA) mode = NORMAL;
-
+			printModeSeq( mode );
+			printStateDebounce( tecla->estadoTecla );
 			if ( !ledsOff(leds, LEDS_SEMAFORO) ) return FALSE; /* Se apagan todos los LEDs del semaforo*/
 
 			switch(mode){

@@ -12,7 +12,8 @@ int main( void )
 {
 	// INICIALIZAR Y CONFIGURAR PLATAFORMA
     boardInit();
-
+    inicializarUART();
+    infoUART();
     /* Verificación TICK_RATE rango permitido de tiempo: 1 a 50 ms */
     if ( ( TICK_RATE < TICK_RATE_MIN ) || ( TICK_RATE > TICK_RATE_MAX ) )  blinkError( ERROR_TIME );
     if ( !tickConfig ( TICK_RATE ) )  blinkError( ERROR_TIME );
