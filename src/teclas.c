@@ -6,6 +6,7 @@
  * Version: 1.0
  *===========================================================================*/
 #include "teclas.h"
+#include "uart.h"
 
 //***** FUNCION QUE INICIALIZA LA MEF DE LAS TECLAS ********************************************
 // Recibe: el numero de tecla que se quiere consultar/actualizar

@@ -23,7 +23,7 @@ int main( void )
 
    // ----- Repeat for ever -------------------------
     while( true ) {
-    	/* Se activa la secuencia correspondiente. En caso de error el programa se bloquea quedando el led rojo parpadeando. */
+    	/* Se actualiza la MEF del semaforo. En caso de error el programa se bloquea quedando el led rojo parpadeando. */
     	if(!actualizarSemaforo(&teclaDOS)) blinkError ( ERROR_SEQ );
     }
     return 0;

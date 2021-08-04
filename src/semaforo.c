@@ -7,6 +7,7 @@
  *===========================================================================*/
 
 #include "../inc/semaforo.h"
+#include "uart.h"
 
 static modeSt_t mode;
 static normalSt_t normalState;
